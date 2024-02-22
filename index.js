@@ -1,12 +1,17 @@
 // Bring the express server & create application
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5001;
 const router = express.Router();
 const pieRepo = require('./repos/pieRepo');
 const errorHelper = require('./helpers/errorHelper');
+const cors = require('cors');
+
 // Configure middleware to support JSON data parsing
 app.use(express.json());
+
+// Configure CORS
+app.use(cors());
 
 // Create a GET to return the list of all pies
 router.get('/', function (req, res, next) {

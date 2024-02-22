@@ -1,6 +1,6 @@
 // pieRepo get function to return an array of pies
 const fs = require('fs');
-const FILE_NAME = './assets/pies2.json';
+const FILE_NAME = './assets/pies.json';
 
 const pieRepo = {
   get: function (resolve, reject) {
